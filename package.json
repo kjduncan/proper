@@ -1,0 +1,17 @@
+{
+  "name": "properweb",
+  "version": "1.0.0",
+  "description": "proper website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "proper"
+  ],
+  "author": "katelyn duncan",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
