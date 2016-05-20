@@ -29,6 +29,8 @@ $pink:             #C552AF;
 
 $tan:              #F8EFE3;
 
+$blue:             #2D3D7D;
+
 // Width of the content area
 $content-width:    800px;
 
@@ -165,9 +167,10 @@ body {
     font-family: 'Raleway', sans-serif;
     color: white;
     text-align: center;
+    margin-top: 38px;
     h1 {
       font-weight: 700;
-      font-size: 50px;
+      font-size: 40px;
     }
     p {
       font-size: 15px;
@@ -198,7 +201,7 @@ body {
 }
 
 .section4 {
-  background-color: $pink;
+  background-color: $purple;
   font-family: 'Raleway', sans-serif;
   color: white;
   .service {
@@ -222,7 +225,7 @@ body {
 }
 
 footer {
-  background-color: $tan;
+  background-color: $pink;
   img {
     margin: 25px 0;
   }
@@ -237,6 +240,12 @@ footer {
 .alt-header {
   .solid {
     width: 100%;
+    &.blue {
+      background-color: $blue;
+      [class^="solid"]{
+          background-color: $blue;
+      }
+    }
     .navbar {
       li {
         margin: 20px 25px 0;
@@ -250,6 +259,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    &.desktop {
+      background-image: url("/assets/images/Desktop.png");
+      background-position: center;
+    }
     h1{
       font-family: 'Raleway', sans-serif;
       color: white;
@@ -269,6 +282,7 @@ footer {
     background-color: $purple;
     font-weight: 700;
     color: white;
+    margin-top: -85px;
   }
 }
 
@@ -279,7 +293,7 @@ footer {
   .info-us {
     position: relative;
     background-color: white;
-    margin-top: -300px;
+    margin-top: -360px;
     border-color: $purple;
     border-style: solid;
     border-width: medium;
@@ -315,6 +329,100 @@ footer {
     margin: 50px 0;
     font-weight: 700;
   }
+}
+.service-section1 {
+  font-family: 'Raleway', sans-serif;
+  background-color: $blue;
+  margin-top: -100px;
+  color: white;
+  .process{
+    font-weight: 700;
+    text-align: center;
+      h1{
+        margin-left: 35%;
+        background-color: rgba(255,255,255, 0.3);
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        line-height: 50px;
+      }
+    h2{
+      font-size: 15px;
+      margin-bottom: 50px;
+    }
+  }
+  .title {
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      width: 75%;
+    }
+  }
+
+  .package {
+    background-color: white;
+    width: 75%;
+    min-height: 160px;
+    border-color: $blue;
+    border-style: solid;
+    margin-bottom: 50px;
+    color: $blue;
+    .image {
+      left: 40px;
+      display: inline-block;
+      background-color: $blue;
+      position: absolute;
+    }
+    .package-text {
+      display: inline-block;
+      position: relative;
+      margin-left: 130px;
+      font-weight: 700;
+    }
+    h2 {
+      padding: 15px;
+      font-size: 15px;
+      text-align: center;
+      font-weight: 700;
+    }
+    p, ul {
+      font-size: 10px;
+      font-weight: 700;
+    }
+  }
+  .start {
+    width: 100%;
+    background-color: white;
+    height: 250px;
+    color: $blue;
+    margin-top: -400px;
+    ul {
+      padding-top: 30px;
+      margin-bottom: 0;
+      list-style-type: none;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+    }
+    .hire {
+      font-family: 'Raleway', sans-serif;
+      color: white;
+      font-size: 12px;
+      background-color: #BDB5BE;
+      height: 40px;
+      width: 100px;
+      margin-left: 40px;
+      border: none;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+  }
+  .end {
+    width: 100%;
+    background-color: $blue;
+    height: 300px;
+  }
+
 }
 
 
@@ -367,14 +475,13 @@ footer {
     margin-bottom: 0;
   }
 
-  .team {
-    margin-right: 50px;
-  }
-
-}
+  // .team {
+  //   margin-right: 50px;
+  // }
   .mary {
     margin-top: 400px;
   }
+}
 
 @media only screen and (min-width: 64.063em) {
 
