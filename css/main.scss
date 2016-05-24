@@ -63,7 +63,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 125px;
+  margin-top: 200px;
 }
 
 .navbar {
@@ -81,6 +81,7 @@ body {
     li {
       font-family: 'Raleway', sans-serif;
       font-weight: 500;
+      letter-spacing: 2px;
       }
       .end {
         margin: 0;
@@ -161,10 +162,8 @@ body {
 
 .section3 {
   width: 100%;
-  padding-top: 150px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("/assets/images/officebottom.png");
+  padding-top: 50px;
+  background-color: $purple;
   .team {
     font-family: 'Raleway', sans-serif;
     color: white;
@@ -173,9 +172,6 @@ body {
     h1 {
       font-weight: 700;
       font-size: 40px;
-    }
-    p {
-      font-size: 15px;
     }
   }
   .person {
@@ -203,6 +199,7 @@ body {
 }
 
 .section4 {
+  margin-top: -1px;
   background-color: $purple;
   font-family: 'Raleway', sans-serif;
   color: white;
@@ -212,6 +209,7 @@ body {
     h1 {
       font-size: 15px;
       font-weight: 700;
+      letter-spacing: 2px;
     }
     .feature {
       display: inline-block;
@@ -261,15 +259,19 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     &.desktop {
       background-image: url("/assets/images/Desktop.png");
       background-position: center;
+    }
+    &.phone {
+      background-image: url("/assets/images/phone.png");
+      background-position: top center;
     }
     h1{
       font-family: 'Raleway', sans-serif;
       color: white;
       font-weight: 700;
-      font-size: 90px;
       letter-spacing: 8px;
     }
   }
@@ -299,6 +301,7 @@ footer {
     border-color: $purple;
     border-style: solid;
     border-width: medium;
+    margin-bottom: 100px;
     h2 {
       margin-top: 25px;
       font-weight: 700;
@@ -412,7 +415,7 @@ footer {
       border: none;
       border-radius: 7px;
       cursor: pointer;
-      margin-top: 17px;
+      margin-top: 20px;
     }
   }
   .end {
@@ -455,6 +458,12 @@ footer {
     }
   }
 
+  .hero {
+    h1 {
+      font-size: 65px;
+    }
+  }
+
   .smb75 {
     margin-bottom: 75px;
   }
@@ -485,7 +494,7 @@ footer {
 
   .navbar {
     li{
-      margin-right: 115px;
+      margin-right: 100px;
     }
   }
 
@@ -511,6 +520,12 @@ footer {
   .package {
     .image {
       left: 50px;
+    }
+  }
+
+  .hero {
+    h1 {
+      font-size: 90px;
     }
   }
 
