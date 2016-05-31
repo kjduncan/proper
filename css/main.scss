@@ -42,6 +42,56 @@ $on-laptop:        800px;
 body {
   overflow-x: hidden;
 }
+.dropdown-nav{
+  // display: none;
+  background-color: $purple;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 500;
+  transform: translateY(-64px);
+  transition: 0.3s transform ease-in-out;
+  &.active{
+    display: block;
+    transform: translateY(0);
+  }
+  img {
+    max-width: 48px;
+    padding: 8px 0;
+  }
+  &.purple{
+    background-color: $purple;
+  }
+  &.blue{
+    background-color: $blue;
+  }
+}
+.arrow {
+  height: 24px;
+  width: 24px;
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  margin: auto;
+  &.animate-arrow {
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+  }
+}
+@keyframes bounce {
+    0% {bottom: 16px;}
+    50% {bottom: 20px;}
+    100%{bottom: 16px;}
+}
+
 .site-header {
   height: 80%;
   background-repeat: no-repeat;
@@ -95,13 +145,15 @@ body {
     font-weight: 700;
     font-size: 80px;
     line-height: 80px;
+    letter-spacing: 10px;
   }
   .right {
     text-align: center;
   }
   h2 {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 15px;
+    letter-spacing: 2px;
   }
   p {
     font-size: 15px;
@@ -160,47 +212,9 @@ body {
   background-color: $purple;
 }
 
-// .section3 {
-//   width: 100%;
-//   padding-top: 50px;
-//   background-color: $purple;
-//   .team {
-//     font-family: 'Raleway', sans-serif;
-//     color: white;
-//     text-align: center;
-//     margin-top: 38px;
-//     h1 {
-//       font-weight: 700;
-//       font-size: 40px;
-//     }
-//   }
-//   .person {
-//     font-family: 'Raleway', sans-serif;
-//     color: white;
-//     text-align: center;
-//     padding: 0 20px;
-//     margin-bottom: 100px;
-//     img {
-//       background-color: white;
-//       width: 100%;
-//     	border-radius: 50%;
-//     }
-//     h2{
-//       margin-top: 15px;
-//       margin-bottom: 0;
-//       font-size: 15px;
-//       font-weight: 700;
-//       line-height: 1;
-//     }
-//     h3{
-//       font-size: 10px;
-//     }
-//   }
-// }
-
 .section4 {
   margin-top: -1px;
-  background-color: $purple; 
+  background-color: $purple;
   font-family: 'Raleway', sans-serif;
   color: white;
   .service {
@@ -238,18 +252,24 @@ footer {
 }
 
 .alt-header {
+  .arrow {
+    bottom: 64px;
+    &.animate-arrow {
+        animation-name: alt-bounce;
+    }
+    @keyframes alt-bounce {
+        0% {bottom: 64px;}
+        50% {bottom: 70px;}
+        100%{bottom: 64px;}
+    }
+
+  }
   .solid {
     width: 100%;
     &.blue {
       background-color: $blue;
       [class^="solid"]{
           background-color: $blue;
-      }
-    }
-    .navbar {
-      li {
-        margin: 20px 25px 0;
-        font-weight: 700;
       }
     }
   }
@@ -372,8 +392,8 @@ footer {
     color: $blue;
     .image {
       display: inline-block;
-      background-color: $blue;
       position: absolute;
+      max-width: 88px;
     }
     .package-text {
       display: inline-block;
@@ -382,12 +402,13 @@ footer {
     }
     h2 {
       padding: 15px;
-      font-size: 15px;
-      text-align: center;
+      font-size: 16px;
+      text-align: left;
+      padding-left: 150px;
       font-weight: 700;
     }
     p, ul {
-      font-size: 10px;
+      font-size: 14px;
       font-weight: 700;
     }
   }
@@ -421,8 +442,20 @@ footer {
   .end {
     width: 100%;
     background-color: $blue;
-    height: 300px;
+    height: 200px;
   }
+
+}
+
+.contact-section1 {
+  text-align: center;
+  background-color: $blue;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+    img{
+      margin: 75px 0;
+    }
 
 }
 
@@ -457,6 +490,14 @@ footer {
       font-size: 15px;
     }
   }
+  .alt-header {
+    .navbar {
+      li {
+        margin: 20px 8px 0;
+        font-weight: 700;
+      }
+    }
+  }
 
   .hero {
     h1 {
@@ -488,6 +529,13 @@ footer {
   .start {
     margin-top: 0px;
   }
+
+  .social {
+    a {
+      max-width: 32px;
+      display: inline-block;
+    }
+  }
 }
 
 @media only screen and (min-width: 40.063em) {
@@ -495,6 +543,14 @@ footer {
   .navbar {
     li{
       margin-right: 100px;
+    }
+  }
+  .alt-header {
+    .navbar {
+      li {
+        margin: 20px 25px 0;
+        font-weight: 700;
+      }
     }
   }
 
@@ -528,6 +584,7 @@ footer {
       font-size: 90px;
     }
   }
+
 
 }
 
